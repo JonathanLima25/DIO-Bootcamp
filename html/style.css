@@ -41,3 +41,8 @@ body {
 .post__conteudo a {
     text-decoration: underline;
 }
+
+.lista__contatos {
+    list-style-type: none;
+    padding-left: 15px;
+}
