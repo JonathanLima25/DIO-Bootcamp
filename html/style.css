@@ -1,3 +1,6 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .cabecalho {
     background: blueviolet;
     align-items: center;
@@ -5,7 +8,36 @@
     justify-content: center;
 }
 .cabecalho__foto {
+    border-radius: 50%;
     height: 100px;
     margin: 20px;
     width: 100px;
+}
+
+.post {
+    background: #fdfdfd;
+    border: 3px solid black;
+    border-radius: 15px;
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+.post__titulo {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.post__foto {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.post__conteudo {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.post__conteudo a {
+    text-decoration: underline;
 }
