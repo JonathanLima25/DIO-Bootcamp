@@ -1,0 +1,11 @@
+.cabecalho {
+    background: blueviolet;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.cabecalho__foto {
+    height: 100px;
+    margin: 20px;
+    width: 100px;
+}
