@@ -5,15 +5,17 @@ class Cliente {
 
 class ContaCorrente {
     agencia;
-    saldo;
+    #saldo = 0;
 
     depositar(valor) {
-        this.saldo += valor; 
+        if(valor > 0){
+            this.#saldo += valor; 
+        }
     }
 
     sacar(valor) {
         if(valor <= this.saldo){
-            this.saldo -= valor;
+            this.#saldo -= valor;
         }
     }
 }
