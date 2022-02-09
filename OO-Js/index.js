@@ -13,4 +13,5 @@ contaCorrenteJonathan.tranferir(500, contaCorrenteNicole);
 
 console.log(contaCorrenteJonathan);
 console.log(contaCorrenteNicole);
+console.log(ContaCorrente.numContas)
 
