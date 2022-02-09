@@ -1,4 +1,4 @@
-import { Cliente } from "./Cliente";
+import { Cliente } from "./Cliente.js";
 
 export class ContaCorrente {
     agencia;
@@ -17,6 +17,11 @@ export class ContaCorrente {
 
     get cliente(){
         return this._cliente;
+    }
+
+    constructor(cliente, agencia){
+        this.cliente = cliente;
+        this.agencia = agencia;
     }
 
     depositar(valor) {
