@@ -1,5 +1,6 @@
 export class Funcionario {
     constructor(nome, salario, cpf){
+        if(this.constructor == Funcionario) throw new Error("Funcionario é abstrata");
         this._nome = nome;
         this._salario = salario;
         this._cpf = cpf;
