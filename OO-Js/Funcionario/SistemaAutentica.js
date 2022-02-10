@@ -6,6 +6,6 @@ export class SistemaAutentica{
         return false;
     }
     static ehAutenticavel(autenticavel){
-        return "autentica" in autenticavel;
+        return "autentica" in autenticavel && autenticavel.autentica instanceof Function;
     }
 }
