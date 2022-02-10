@@ -1,5 +1,11 @@
 export class SistemaAutentica{
     static login(autenticavel, senha){
-        return autenticavel.autentica(senha);
+        if(SistemaAutentica.ehAutenticavel(autenticavel)){
+            return autenticavel.autentica(senha);
+        }
+        return false;
+    }
+    static ehAutenticavel(autenticavel){
+        return "autentica" in autenticavel;
     }
 }
