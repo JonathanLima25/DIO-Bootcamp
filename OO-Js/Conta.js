@@ -25,9 +25,15 @@ export class Conta{
     }
 
     sacar(valor) {
-        if(valor > this.saldo) return;
-        this._saldo -= valor;
-        return valor;
+        let taxa = 1;
+        return this._sacar(valor, taxa);
+    }
+
+    _sacar(valor, taxa){
+        const valorSacado = taxa * valor;
+        if(valorSacado > this.saldo) return 0;
+        this._saldo -= valorSacado;
+        return valorSacado;
         //console.log("Valor sacado : R$", valor)
     }
 
