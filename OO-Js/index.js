@@ -1,4 +1,5 @@
 import {Cliente} from "./Cliente.js"
+import { Conta } from "./Conta.js";
 import {ContaCorrente} from "./ContaCorrente.js"
 
 const cliente1 = new Cliente("Jonathan", 11122233309);
@@ -13,5 +14,7 @@ contaCorrenteJonathan.tranferir(500, contaCorrenteNicole);
 
 console.log(contaCorrenteJonathan);
 console.log(contaCorrenteNicole);
-console.log(ContaCorrente.numContas)
+console.log(ContaCorrente.numContas);
+
+// const conta = new Conta(0, cliente2, 1001);
 
