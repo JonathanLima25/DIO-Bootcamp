@@ -1,11 +1,18 @@
-// Generic types
-function preencherlista<NaoSei>(array: any[], value: NaoSei) {
-    return array.map(item => item + value);
+interface IUsuario {
+    id: string;
+    email: string;
 }
 
+interface IAdmin extends IUsuario{
+    cargo: 'gerente' | 'coordenador' | 'supervisor';
+}
 
-preencherlista([1, 2, 3], 4);
-
+function redirecione(usuario: IUsuario | IAdmin) {
+    if('cargo' in usuario) {
+        // redirecionar para a area de administração
+    }
+    // redirecionar para a area do usuario
+}
 
 
 
@@ -60,3 +67,16 @@ preencherlista([1, 2, 3], 4);
 //     const i = event.currentTarget as HTMLInputElement;
 //     console.log(i.value);
 // });
+
+
+
+
+
+
+// Generic types
+// function preencherlista<NaoSei>(array: any[], value: NaoSei) {
+//     return array.map(item => item + value);
+// }
+
+
+// preencherlista([1, 2, 3], 4);
