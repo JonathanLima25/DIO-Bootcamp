@@ -118,11 +118,20 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"index.ts":[function(require,module,exports) {
-function redirecione(usuario) {
-  if ('cargo' in usuario) {// redirecionar para a area de administração
-  } // redirecionar para a area do usuario
+var MeuCachorro =
+/** @class */
+function () {
+  function MeuCachorro(nome, idade) {
+    this.nome = nome;
+    this.idade = idade;
+  }
 
-} // types
+  return MeuCachorro;
+}();
+
+var cao = new MeuCachorro('Luke', 2);
+cao.idade = 10;
+console.log(cao.idade); // types
 // interfaces
 // interface IAnimal {
 //     nome: string;
@@ -164,6 +173,19 @@ function redirecione(usuario) {
 //     return array.map(item => item + value);
 // }
 // preencherlista([1, 2, 3], 4);
+// interface IUsuario {
+//     id: string;
+//     email: string;
+// }
+// interface IAdmin extends IUsuario{
+//     cargo: 'gerente' | 'coordenador' | 'supervisor';
+// }
+// function redirecione(usuario: IUsuario | IAdmin) {
+//     if('cargo' in usuario) {
+//         // redirecionar para a area de administração
+//     }
+//     // redirecionar para a area do usuario
+// }
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

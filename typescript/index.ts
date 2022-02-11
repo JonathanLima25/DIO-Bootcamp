@@ -1,21 +1,27 @@
-interface IUsuario {
-    id: string;
-    email: string;
+interface Cachorro {
+    readonly nome: string;
+    readonly idade: number;
+    readonly parque?: string;
 }
 
-interface IAdmin extends IUsuario{
-    cargo: 'gerente' | 'coordenador' | 'supervisor';
+type CachorroSomenteleitura = {
+    readonly [K in keyof Cachorro]: Cachorro[K]
 }
 
-function redirecione(usuario: IUsuario | IAdmin) {
-    if('cargo' in usuario) {
-        // redirecionar para a area de administração
+class MeuCachorro implements Cachorro {
+    nome;
+    idade; 
+
+    constructor(nome, idade) {
+        this.nome = nome;
+        this.idade = idade;
     }
-    // redirecionar para a area do usuario
 }
 
+const cao = new MeuCachorro('Luke', 2) 
+cao.idade = 10
 
-
+console.log(cao.idade)
 
 
 // types
@@ -80,3 +86,23 @@ function redirecione(usuario: IUsuario | IAdmin) {
 
 
 // preencherlista([1, 2, 3], 4);
+
+
+
+
+
+// interface IUsuario {
+//     id: string;
+//     email: string;
+// }
+
+// interface IAdmin extends IUsuario{
+//     cargo: 'gerente' | 'coordenador' | 'supervisor';
+// }
+
+// function redirecione(usuario: IUsuario | IAdmin) {
+//     if('cargo' in usuario) {
+//         // redirecionar para a area de administração
+//     }
+//     // redirecionar para a area do usuario
+// }
