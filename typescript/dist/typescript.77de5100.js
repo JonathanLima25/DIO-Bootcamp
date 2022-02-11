@@ -118,26 +118,42 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"index.ts":[function(require,module,exports) {
-// types
+var input = document.getElementById('input');
+input.addEventListener('input', function (event) {
+  var i = event.currentTarget;
+  console.log(i.value);
+}); // types
 // interfaces
-var cachorro = {
-  nome: 'Rufus',
-  tipo: 'terrestre',
-  porte: 'medio',
-  domestico: true,
-  visaoNoturna: false
-};
-var animal = {
-  nome: 'Elefante',
-  tipo: 'terrestre',
-  domestico: false
-};
-var gato = {
-  nome: 'Chico',
-  tipo: 'terrestre',
-  visaoNoturna: true,
-  domestico: true
-};
+// interface IAnimal {
+//     nome: string;
+//     tipo: 'terrestre' | 'aquatico';
+//     domestico: boolean
+// }
+// interface IFelinos extends IAnimal{
+//     visaoNoturna: boolean;
+// }
+// interface ICanino extends IAnimal{
+//     porte: 'pequeno' | 'medio' | 'grande'
+// }
+// type IDomestico = ICanino | IFelinos
+// const cachorro: IDomestico = {
+//     nome: 'Rufus',
+//     tipo: 'terrestre',
+//     porte: 'medio',
+//     domestico: true,
+//     visaoNoturna: false
+// }
+// const animal: IAnimal = {
+//     nome: 'Elefante',
+//     tipo: 'terrestre',
+//     domestico: false
+// }
+// const gato: IFelinos = {
+//     nome: 'Chico',
+//     tipo: 'terrestre',
+//     visaoNoturna: true,
+//     domestico: true
+// }
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
