@@ -1,27 +1,13 @@
-interface Cachorro {
-    readonly nome: string;
-    readonly idade: number;
-    readonly parque?: string;
-}
+import $ from 'jquery';
 
-type CachorroSomenteleitura = {
-    readonly [K in keyof Cachorro]: Cachorro[K]
-}
-
-class MeuCachorro implements Cachorro {
-    nome;
-    idade; 
-
-    constructor(nome, idade) {
-        this.nome = nome;
-        this.idade = idade;
+$.fn.extend({
+    novaFuncao() {
+        console.log('Chamou nova função')
     }
-}
+})
 
-const cao = new MeuCachorro('Luke', 2) 
-cao.idade = 10
+$('body').novaFuncao();
 
-console.log(cao.idade)
 
 
 // types
@@ -106,3 +92,32 @@ console.log(cao.idade)
 //     }
 //     // redirecionar para a area do usuario
 // }
+
+
+
+
+
+// interface Cachorro {
+//     readonly nome: string;
+//     readonly idade: number;
+//     readonly parque?: string;
+// }
+
+// type CachorroSomenteleitura = {
+//     readonly [K in keyof Cachorro]: Cachorro[K]
+// }
+
+// class MeuCachorro implements Cachorro {
+//     nome;
+//     idade; 
+
+//     constructor(nome, idade) {
+//         this.nome = nome;
+//         this.idade = idade;
+//     }
+// }
+
+// const cao = new MeuCachorro('Luke', 2) 
+// cao.idade = 10
+
+// console.log(cao.idade)
