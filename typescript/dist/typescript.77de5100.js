@@ -118,11 +118,14 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"index.ts":[function(require,module,exports) {
-var input = document.getElementById('input');
-input.addEventListener('input', function (event) {
-  var i = event.currentTarget;
-  console.log(i.value);
-}); // types
+// Generic types
+function preencherlista(array, value) {
+  return array.map(function (item) {
+    return item + value;
+  });
+}
+
+preencherlista([1, 2, 3], 4); // types
 // interfaces
 // interface IAnimal {
 //     nome: string;
@@ -154,6 +157,11 @@ input.addEventListener('input', function (event) {
 //     visaoNoturna: true,
 //     domestico: true
 // }
+// const input = document.getElementById('input') as HTMLInputElement;
+// input.addEventListener('input', (event) => {
+//     const i = event.currentTarget as HTMLInputElement;
+//     console.log(i.value);
+// });
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

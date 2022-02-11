@@ -1,12 +1,10 @@
-
-const input = document.getElementById('input') as HTMLInputElement;
-input.addEventListener('input', (event) => {
-    const i = event.currentTarget as HTMLInputElement;
-    console.log(i.value);
-});
+// Generic types
+function preencherlista<NaoSei>(array: any[], value: NaoSei) {
+    return array.map(item => item + value);
+}
 
 
-
+preencherlista([1, 2, 3], 4);
 
 
 
@@ -52,3 +50,13 @@ input.addEventListener('input', (event) => {
 //     visaoNoturna: true,
 //     domestico: true
 // }
+
+
+
+
+
+// const input = document.getElementById('input') as HTMLInputElement;
+// input.addEventListener('input', (event) => {
+//     const i = event.currentTarget as HTMLInputElement;
+//     console.log(i.value);
+// });
