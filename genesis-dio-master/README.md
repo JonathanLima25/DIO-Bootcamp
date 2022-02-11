@@ -1,6 +1,8 @@
-# Oi, tudo bem? Chegou aqui através do curso, certo? 🙃
+# Projeto Genesis do Bootcamp 
 
-Esse é o repositório da nossa aula de Javascript, na qual vamos fazer um simples jogo Gênesis com apenas algumas linhas de código! 
+Esse é o projeto de jogo Genesis.
+
+Consiste em apagar as cores numa ordem aleatória e o usuário tentar acertar, se acertar ele vai passando de nível infinitas vezes e se errar, será notificado que perdeu e em qual nível ele parou.
 
 ### Os requisitos são:
 
