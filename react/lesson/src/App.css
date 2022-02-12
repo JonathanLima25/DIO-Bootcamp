@@ -28,6 +28,22 @@
   color: #61dafb;
 }
 
+.teste {
+  background-color: rgb(192, 250, 230);
+  border: 5px solid black;
+  margin: auto;
+  margin-top: 2rem;
+  padding: 2rem;
+  text-align: center;
+  width: max-content;
+}
+
+.teste-soma {
+  color: rgb(59, 219, 59);
+  font-size: 2rem;
+  text-decoration: underline;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
