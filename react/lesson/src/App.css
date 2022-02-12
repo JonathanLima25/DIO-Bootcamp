@@ -31,6 +31,7 @@
 .teste {
   background-color: rgb(192, 250, 230);
   border: 5px solid black;
+  border-radius: 15px;
   margin: auto;
   margin-top: 2rem;
   padding: 2rem;
