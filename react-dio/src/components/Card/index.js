@@ -31,7 +31,7 @@ const Card = () => {
             onClick={Remover}
         >
             Remover
-        </Button>
+        </Button>   
       </div>
     </div>
   );
