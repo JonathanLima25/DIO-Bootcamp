@@ -9,5 +9,11 @@
     "build": "tsc -p ."
   },
   "author": "Jonathan",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13"
+  }
 }
